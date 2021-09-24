@@ -1,0 +1,58 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier/@typescript-eslint",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier"],
+  "env": {
+    "node": true,
+    "browser": true,
+    "jasmine": true,
+    "jest": true,
+    "es6": true
+  },
+  "rules": {
+    "prettier/prettier": [
+      "warn",
+      {
+        "singleQuote": true,
+        "jsxSingleQuote": true,
+        "arrowParens": "avoid",
+        "endOfLine": "auto",
+        "trailingComma": "none"
+      }
+    ]
+  },
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "detect"
+    }
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "overrides": [
+    {
+      "files": ["**/*.ts?(x)"],
+      "rules": {
+        "@typescript-eslint/camelcase": 0,
+        "@typescript-eslint/ban-ts-ignore": 0,
+        "@typescript-eslint/no-explicit-any": 0,
+        "@typescript-eslint/interface-name-prefix": 0,
+        "@typescript-eslint/explicit-member-accessibility": 0,
+        "@typescript-eslint/explicit-function-return-type": 0,
+        "@typescript-eslint/no-non-null-assertion": 0,
+        "react/prop-types": 0,
+        "react/display-name": 0,
+        "@typescript-eslint/no-namespace": 0,
+        "no-console": ["error", { "allow": ["warn", "error"] }],
+        "@typescript-eslint/explicit-module-boundary-types": 0
+      }
+    }
+  ]
+}
