@@ -6,7 +6,12 @@
     "prettier/@typescript-eslint",
     "plugin:prettier/recommended"
   ],
-  "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier"],
+  "plugins": [
+    "react",
+    "react-hooks",
+    "@typescript-eslint",
+    "prettier"
+  ],
   "env": {
     "node": true,
     "browser": true,
@@ -38,20 +43,12 @@
   },
   "overrides": [
     {
-      "files": ["**/*.ts?(x)"],
+      "files": [
+        "*"
+      ],
       "rules": {
-        "@typescript-eslint/camelcase": 0,
-        "@typescript-eslint/ban-ts-ignore": 0,
-        "@typescript-eslint/no-explicit-any": 0,
-        "@typescript-eslint/interface-name-prefix": 0,
-        "@typescript-eslint/explicit-member-accessibility": 0,
-        "@typescript-eslint/explicit-function-return-type": 0,
-        "@typescript-eslint/no-non-null-assertion": 0,
-        "react/prop-types": 0,
-        "react/display-name": 0,
-        "@typescript-eslint/no-namespace": 0,
-        "no-console": ["error", { "allow": ["warn", "error"] }],
-        "@typescript-eslint/explicit-module-boundary-types": 0
+        "@typescript-eslint/explicit-module-boundary-types": 0,
+        "@typescript-eslint/ban-ts-comment": 0
       }
     }
   ]
