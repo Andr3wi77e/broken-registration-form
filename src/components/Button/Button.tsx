@@ -21,7 +21,7 @@ const SButton = styled.button.withConfig({
 
 const Button = <P extends React.ElementType = 'button'>({
   children,
-  color = '#7DB7EE',
+  color = '#2F7FCF',
   textColor = '#fff',
   ...rest
 }: Props<P>) => (
