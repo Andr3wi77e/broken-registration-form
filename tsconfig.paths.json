@@ -1,12 +1,18 @@
 {
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": ".",
     "paths": {
       "@components/*": [
         "src/components/*"
       ],
       "@pages/*": [
         "src/pages/*"
+      ],
+      "@styledUtils": [
+        "src/helpers/styledUtils"
+      ],
+      "@helpers/*": [
+        "src/helpers/*"
       ]
     }
   }

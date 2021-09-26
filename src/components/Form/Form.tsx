@@ -1,8 +1,11 @@
 import React from 'react';
-import { IForm } from './interface';
+import { Props } from './interface';
 
-const Form = ({ children }: IForm) => {
-  return <table>{children}</table>;
+const Form = <P extends React.ElementType = 'form'>({
+  children,
+  ...rest
+}: Props<P>) => {
+  return <form {...rest}>{children}</form>;
 };
 
 export default Form;
