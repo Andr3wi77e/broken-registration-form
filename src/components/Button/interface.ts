@@ -1,7 +1,8 @@
 import { MergeElementProps } from '@components/utils';
 import { ReactNode, ReactText } from 'react';
+import { IsBroken } from '@resources_types/brokenFormTypes';
 
-export interface IButton {
+export interface IButton extends IsBroken {
   children: ReactNode | ReactText;
   color?: string;
   textColor?: string;

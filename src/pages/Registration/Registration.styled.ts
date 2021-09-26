@@ -3,7 +3,13 @@ import Flex from '@components/Flex';
 import Text from '@components/Text';
 import Input from '@components/Input';
 import Button from '@components/Button';
-import Form from '@components/Form';
+import Form from '@components/FormComponents/Form';
+import {
+  brokenTransformScale,
+  brokenTransformSkew
+} from '@helpers/brokenStyles';
+import { shouldForwardProp } from '@styledUtils';
+import { IsBroken } from '@resources_types/brokenFormTypes';
 
 export const Container = styled(Flex).attrs(() => ({
   direction: 'column',
@@ -16,7 +22,16 @@ export const Container = styled(Flex).attrs(() => ({
   height: 100vh;
 `;
 
-export const Title = styled(Text).attrs(() => ({ size: 20, role: 'h6' }))``;
+export const Title = styled(Text)
+  .withConfig({ shouldForwardProp: shouldForwardProp(['isBroken']) })
+  .attrs(({ isBroken }: IsBroken) => ({
+    size: 20,
+    role: 'h6',
+    as: isBroken ? 'table' : undefined
+  }))<IsBroken>`
+  ${brokenTransformScale};
+  ${brokenTransformSkew};
+`;
 
 export const FieldsContainer = styled(Flex).attrs(() => ({
   direction: 'column',

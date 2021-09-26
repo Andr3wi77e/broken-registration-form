@@ -7,8 +7,17 @@ import {
   SubmitButton,
   SForm
 } from './Registration.styled';
+import GroupInputItems from '@components/FormComponents/GroupInputItems';
+import { InputGroupItemValue } from '@components/FormComponents/GroupInputItems/interface';
+import useBreakFormContext from '@contexts/BreakFormContext';
+
+const radioGroupValues: InputGroupItemValue[] = [
+  { id: 'male', value: 'male', label: 'male' },
+  { id: 'female', value: 'female', label: 'female' }
+];
 
 const Registration = () => {
+  const { isBroken } = useBreakFormContext();
   const fields = [
     { key: 'name', placeholder: 'Имя' },
     { key: 'surname', placeholder: 'Фамилия' },
@@ -18,25 +27,40 @@ const Registration = () => {
 
   const onSubmit = (e: any) => {
     e.preventDefault();
-    const { name, surname, email, password } = e.target.elements;
+    const { name, surname, email, password, gender } = e.target.elements;
     console.log({
       name: name.value,
       surname: surname.value,
       email: email.value,
-      password: password.value
+      password: password.value,
+      gender: gender.value
     });
   };
 
   return (
     <Container>
-      <Title>Страница регистрации</Title>
+      <Title isBroken={isBroken}>Страница регистрации</Title>
       <SForm onSubmit={onSubmit}>
         <FieldsContainer>
           {fields.map(({ key, placeholder, type = 'text' }) => (
-            <Field key={key} name={key} type={type} placeholder={placeholder} />
+            <Field
+              key={key}
+              name={key}
+              type={type}
+              placeholder={placeholder}
+              isBroken={isBroken}
+            />
           ))}
         </FieldsContainer>
-        <SubmitButton type='submit'>Отправить</SubmitButton>
+        <GroupInputItems
+          name='gender'
+          values={radioGroupValues}
+          type='radio'
+          isBroken={isBroken}
+        />
+        <SubmitButton type='submit' isBroken={isBroken}>
+          Отправить
+        </SubmitButton>
       </SForm>
     </Container>
   );

@@ -1,5 +1,6 @@
 import { ICommonProps } from '@components/utils';
 import { ReactText } from 'react';
+import { IsBroken } from '@resources_types/brokenFormTypes';
 type InputChangeEvent = React.ChangeEvent<HTMLInputElement>;
 
 export type InputType =
@@ -11,7 +12,7 @@ export type InputType =
   | 'email'
   | string;
 
-export interface IInput extends ICommonProps {
+export interface IInput extends ICommonProps, IsBroken {
   onChange?: (e: InputChangeEvent) => void;
   onBlur?: (e: React.FocusEvent<HTMLInputElement>) => void;
   onFocus?: (e: React.FocusEvent<HTMLInputElement>) => void;
