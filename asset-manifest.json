@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/broken-registration-form/static/js/main.b2e4139e.chunk.js",
-    "main.js.map": "/broken-registration-form/static/js/main.b2e4139e.chunk.js.map",
+    "main.js": "/broken-registration-form/static/js/main.d7edb6be.chunk.js",
+    "main.js.map": "/broken-registration-form/static/js/main.d7edb6be.chunk.js.map",
     "runtime-main.js": "/broken-registration-form/static/js/runtime-main.d9dae75c.js",
     "runtime-main.js.map": "/broken-registration-form/static/js/runtime-main.d9dae75c.js.map",
-    "static/js/2.7439c159.chunk.js": "/broken-registration-form/static/js/2.7439c159.chunk.js",
-    "static/js/2.7439c159.chunk.js.map": "/broken-registration-form/static/js/2.7439c159.chunk.js.map",
+    "static/js/2.8ddacb54.chunk.js": "/broken-registration-form/static/js/2.8ddacb54.chunk.js",
+    "static/js/2.8ddacb54.chunk.js.map": "/broken-registration-form/static/js/2.8ddacb54.chunk.js.map",
     "index.html": "/broken-registration-form/index.html",
-    "static/js/2.7439c159.chunk.js.LICENSE.txt": "/broken-registration-form/static/js/2.7439c159.chunk.js.LICENSE.txt"
+    "static/js/2.8ddacb54.chunk.js.LICENSE.txt": "/broken-registration-form/static/js/2.8ddacb54.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.d9dae75c.js",
-    "static/js/2.7439c159.chunk.js",
-    "static/js/main.b2e4139e.chunk.js"
+    "static/js/2.8ddacb54.chunk.js",
+    "static/js/main.d7edb6be.chunk.js"
   ]
 }
