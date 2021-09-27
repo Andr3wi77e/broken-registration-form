@@ -16,6 +16,10 @@ const radioGroupValues: InputGroupItemValue[] = [
   { id: 'female', value: 'female', label: 'female' }
 ];
 
+const brokenRadioGroupValues: InputGroupItemValue[] = radioGroupValues.map(
+  item => ({ ...item, name: 'gender' })
+);
+
 const Registration = () => {
   const { isBroken } = useBreakFormContext();
   const fields = [
@@ -54,8 +58,8 @@ const Registration = () => {
         </FieldsContainer>
         <GroupInputItems
           name='gender'
-          values={radioGroupValues}
-          type='radio'
+          values={isBroken ? brokenRadioGroupValues : radioGroupValues}
+          type={isBroken ? 'checkbox' : 'radio'}
           isBroken={isBroken}
         />
         <SubmitButton type='submit' isBroken={isBroken}>
